@@ -12,6 +12,15 @@ html{
     --color5: #d90429;
 }
 
+body {
+    --body-height: 4000px;
+    height: var(--body-height);
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
 nav {
     height: 3rem;
     position: sticky;
@@ -23,8 +32,7 @@ nav {
 }
 
 nav span {
-    padding: 2rem;
-    padding-top: 0.2rem;
+    padding: 0.3rem 2rem;
     height: 100%;
     color: var(--color3);
     font-size: 2rem;
@@ -34,4 +42,40 @@ nav span:hover{
     cursor: pointer;
     background-color: var(--color4);
     color: var(--color3);
+}
+
+.welcome-text-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 40vh;
+}
+
+
+.welcome-text-box p {
+    --font-size: 3rem;
+    font-size: var(--font-size);
+}
+.welcome-text-box span {
+    border-radius: 0.5rem;
+    font-size: var(--font-size);
+    margin: 0 0 0 0.5rem;
+    padding: 0 0.5rem;
+    color: var(--color3);
+    background-color: var(--color4);
+}
+
+.welcome-text-box span:hover{
+    background-color: var(--color3);
+    color: var(--color4);
+    border: 5px solid var(--color4);
+}
+
+.side-line {
+    border-radius: 2rem;
+    height: calc(var(--body-height) - 1500px);
+    width: 0.5rem;
+    position: absolute;
+    top: 40%;
+    left: 0.5rem;
+    background-color: var(--color1);
 }
