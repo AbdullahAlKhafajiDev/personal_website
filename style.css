@@ -3,3 +3,35 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html{
+    --color1: #2b2d42;
+    --color2: #8d99ae;
+    --color3: #edf2f4;
+    --color4: #ef233c;
+    --color5: #d90429;
+}
+
+nav {
+    height: 3rem;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--color1);
+}
+
+nav span {
+    padding: 2rem;
+    padding-top: 0.2rem;
+    height: 100%;
+    color: var(--color3);
+    font-size: 2rem;
+}
+
+nav span:hover{
+    cursor: pointer;
+    background-color: var(--color4);
+    color: var(--color3);
+}
