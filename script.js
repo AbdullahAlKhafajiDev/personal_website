@@ -11,14 +11,18 @@ me_to_name.addEventListener('mouseout', (e)=>{
 })
 
 window.addEventListener('scroll', (e)=>{
-    precentageScrolled = getScrollPercent()
-
-    if (precentageScrolled == 0){
+    fillScrollBar = document.querySelector('.fill-side-line')
+    percentageScrolled = getScrollPercent() * 0.01
+    console.log(percentageScrolled)
+    let i = 1;
+    //changes name on scroll.
+    if (percentageScrolled == 0){
         me_to_name.innerHTML = "me"
     }
-    else (
-        me_to_name.innerHTML = "Abdullah Al Khafaji"
-    )
+    else {
+        me_to_name.innerHTML = "Abdullah Al Khafaji";
+        fillScrollBar.style.height = `${percentageScrolled * 2500}px`;
+    }
     
 })
 
