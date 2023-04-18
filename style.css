@@ -92,3 +92,40 @@ nav span:hover{
     left: 0.5rem;
     background-color: var(--color4);
 }
+
+.paragraph-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 40vh;
+}
+
+.paragraph-section p {
+    ---font-size: 3rem;
+    font-size: var(---font-size);
+    text-align: center
+}
+
+.paragraph-section span {
+    --text-color-primary: var(--color1);
+    --text-color-secondary: var(--color3);
+
+    border-radius: 0.5rem;
+    font-size: var(--font-size);
+    margin: 0 0 0 0.5rem;
+    padding: 0 0.5rem;
+    color: var(--text-color-secondary);
+    background-color: var(--text-color-primary);
+}
+
+.paragraph-section a {
+    --text-color-primary: var(--color4);
+    --text-color-secondary: var(--color3);
+
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: var(--font-size);
+    margin: 0 0 0 0.5rem;
+    padding: 0 0.5rem;
+    color: var(--text-color-secondary);
+    background-color: var(--text-color-primary); 
+}
