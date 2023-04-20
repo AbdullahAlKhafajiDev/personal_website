@@ -15,7 +15,6 @@ html{
 body {
     --body-height: 4000px;
     height: var(--body-height);
-    background-color: #c9d6ee;
 }
 
 ::-webkit-scrollbar{
@@ -43,23 +42,6 @@ nav span:hover{
     cursor: pointer;
     background-color: var(--color4);
     color: var(--color3);
-}
-
-.welcome-text-box p {
-    --font-size: 3rem;
-    font-size: var(--font-size);
-}
-
-.welcome-text-box span {
-    --text-color-primary: var(--color1);
-    --text-color-secondary: var(--color3);
-
-    border-radius: 0.5rem;
-    font-size: var(--font-size);
-    margin: 0 0 0 0.5rem;
-    padding: 0 0.5rem;
-    color: var(--text-color-secondary);
-    background-color: var(--text-color-primary);
 }
 
 .side-line {
@@ -118,6 +100,10 @@ nav span:hover{
     height: 50vh;
     align-items: center;
     justify-content: center;
+}
+
+.welcome-block {
+    background-color: green;
 }
 
 .first-block {

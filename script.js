@@ -1,4 +1,4 @@
-const me_to_name = document.querySelector(".welcome-text-box span")
+const me_to_name = document.querySelector(".welcome-block span")
 
 
 //for changing the ME to ABDULLAH AL KHAFAJI.
