@@ -2,14 +2,6 @@ const me_to_name = document.querySelector(".welcome-block span")
 
 
 //for changing the ME to ABDULLAH AL KHAFAJI.
-me_to_name.addEventListener('mouseover', (e)=>{
-    me_to_name.innerHTML = "Abdullah Al Khafaji"
-})
-
-me_to_name.addEventListener('mouseout', (e)=>{
-    me_to_name.innerHTML = "me"
-})
-
 window.addEventListener('scroll', (e)=>{
     fillScrollBar = document.querySelector('.fill-side-line')
     percentageScrolled = getScrollPercent() * 0.01
