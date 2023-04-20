@@ -15,6 +15,7 @@ html{
 body {
     --body-height: 4000px;
     height: var(--body-height);
+    background-color: #c9d6ee;
 }
 
 ::-webkit-scrollbar{
@@ -44,17 +45,11 @@ nav span:hover{
     color: var(--color3);
 }
 
-.welcome-text-box {
-    display: flex;
-    justify-content: center;
-    margin-top: 40vh;
-}
-
-
 .welcome-text-box p {
     --font-size: 3rem;
     font-size: var(--font-size);
 }
+
 .welcome-text-box span {
     --text-color-primary: var(--color1);
     --text-color-secondary: var(--color3);
@@ -65,12 +60,6 @@ nav span:hover{
     padding: 0 0.5rem;
     color: var(--text-color-secondary);
     background-color: var(--text-color-primary);
-}
-
-.welcome-text-box span:hover{
-    background-color: var(--text-color-secondary);
-    color: var(--text-color-primary);
-    border: 5px solid var(--text-color-primary);
 }
 
 .side-line {
@@ -93,12 +82,6 @@ nav span:hover{
     background-color: var(--color4);
 }
 
-.paragraph-section {
-    display: flex;
-    justify-content: center;
-    margin-top: 40vh;
-}
-
 .paragraph-section p {
     ---font-size: 3rem;
     font-size: var(---font-size);
@@ -118,7 +101,7 @@ nav span:hover{
 }
 
 .paragraph-section a {
-    --text-color-primary: var(--color4);
+    --text-color-primary: #545786;
     --text-color-secondary: var(--color3);
 
     text-decoration: none;
@@ -128,4 +111,23 @@ nav span:hover{
     padding: 0 0.5rem;
     color: var(--text-color-secondary);
     background-color: var(--text-color-primary); 
+}
+
+.block {
+    display: flex;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-block {
+    background-color: #d90429;
+}
+
+.second-block {
+    background-color: #8d99ae;
+}
+
+.third-block {
+    background-color: #ef233c;
 }
