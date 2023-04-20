@@ -66,6 +66,17 @@ nav span:hover{
     background-color: var(--color4);
 }
 
+
+
+div:not(.welcome-block) .paragraph-section {
+    margin: 0 0 0 15%;
+}
+
+.welcome-block .paragraph-section{
+    margin: 0 auto;
+}
+
+
 .paragraph-section p {
     color: inherit;
     ---font-size: 2.5rem;
@@ -106,10 +117,11 @@ nav span:hover{
 
 .block {
     display: flex;
+    justify-content: left;
     height: 40vh;
     margin: 15rem 0;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .welcome-block > .paragraph-section { 
