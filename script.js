@@ -7,6 +7,7 @@ var inFirstSection = true;
 
 //for changing the ME to ABDULLAH AL KHAFAJI.
 window.addEventListener('scroll', (e)=>{
+    const personalImgae = document.getElementById('personal_image')
     fillScrollBar = document.querySelector('.fill-side-line')
     percentageScrolled = getScrollPercent() * 0.01
     console.log(percentageScrolled)
@@ -16,11 +17,21 @@ window.addEventListener('scroll', (e)=>{
         me_to_name.innerHTML = "me"
         fillScrollBar.style.height = `0px`
         inFirstSection = true;
+
+        //image transformation
+        personalImgae.style.opacity = '0'
+        personalImgae.style.transform = "translate(-50%,-30%)"
     }
     else {
+        
         if (asyncFuncWorking == false && inFirstSection == true){
-            slowTextTransformer(me_to_name, "Abdullah Al Khafaji")
+            slowTextTransformer(me_to_name, "Abdullah Al Khafaji");
+
+            //image transformation.
+            personalImgae.style.opacity = '1'
+            personalImgae.style.transform = "translate(-50%,-50%)"
         }
+
         inFirstSection = false;
         // me_to_name.innerHTML = "Abdullah Al Khafaji";
         fillScrollBar.style.height = `${percentageScrolled * (bodyHeightFinder() * 0.7)}px`;

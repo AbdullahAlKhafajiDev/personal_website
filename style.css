@@ -79,6 +79,26 @@ div:not(.welcome-block) .paragraph-section {
     margin: 0 auto;
 }
 
+.welcome-block > .paragraph-section { 
+    color: black;
+    border-radius: 50px;
+    padding: 1.5rem 3rem;
+    background-image: linear-gradient(
+        to bottom,
+        #f57f7f,
+        #ee6f6f
+    );
+}
+
+.welcome-block img {
+    position: absolute;
+    height: 300px;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%,0%);
+    opacity: 0;
+    transition-duration: 0.5s;
+}
 
 .paragraph-section p {
     color: inherit;
@@ -118,17 +138,6 @@ div:not(.welcome-block) .paragraph-section {
     height: 40vh;
     margin: 15rem 0;
     align-items: center;
-}
-
-.welcome-block > .paragraph-section { 
-    color: black;
-    border-radius: 50px;
-    padding: 1.5rem 3rem;
-    background-image: linear-gradient(
-        to bottom,
-        #f57f7f,
-        #ee6f6f
-    );
 }
 
 .first-block {
