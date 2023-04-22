@@ -33,7 +33,6 @@ window.addEventListener('scroll', (e)=>{
         }
 
         inFirstSection = false;
-        // me_to_name.innerHTML = "Abdullah Al Khafaji";
         fillScrollBar.style.height = `${percentageScrolled * (bodyHeightFinder() * 0.7)}px`;
     }
 })
