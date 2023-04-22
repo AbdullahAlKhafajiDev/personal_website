@@ -5,6 +5,10 @@ leftScrollBackground.style.height = `${bodyHeightFinder() * 0.7}px`
 var asyncFuncWorking = false; //global variable to prevent repeated function calls.
 var inFirstSection = true;
 
+document.querySelector('.first-block').style.setProperty('--opacity', 1)
+document.querySelector('.second-block').style.setProperty('--opacity', 1)
+document.querySelector('.third-block').style.setProperty('--opacity', 1)
+
 //for changing the ME to ABDULLAH AL KHAFAJI.
 window.addEventListener('scroll', (e)=>{
     const personalImgae = document.getElementById('personal_image')
@@ -34,6 +38,11 @@ window.addEventListener('scroll', (e)=>{
 
         inFirstSection = false;
         fillScrollBar.style.height = `${percentageScrolled * (bodyHeightFinder() * 0.7)}px`;
+
+        //will return true if object in view.
+        gradientBackgroundChanger(document.querySelector('.first-block'))
+        gradientBackgroundChanger(document.querySelector('.second-block'))
+        gradientBackgroundChanger(document.querySelector('.third-block'))
     }
 })
 
@@ -67,4 +76,28 @@ function slowTextTransformer(elementObject, newString){
             }
         }, delay += speed);
     }
+}
+
+function isInViewport(elementObject){
+    let  bounding = elementObject.getBoundingClientRect();
+    
+    if (bounding.top >= 0 && bounding.left >= 0 && bounding.right <= window.innerWidth && bounding.bottom <= window.innerHeight) {
+        return true
+    }
+}
+
+function gradientBackgroundChanger(object){
+    let blockInView = isInViewport(object)
+        if (blockInView){
+            object.style.setProperty('--opacity', 0)
+            setTimeout(() => {
+                object.style.setProperty('--display', 'none')
+            }, 500);
+        }
+        else {
+            object.style.setProperty('--opacity', 1)
+            setTimeout(() => {
+                object.style.setProperty('--display', 'block')
+            }, 500);
+        }
 }

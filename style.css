@@ -114,7 +114,7 @@ div:not(.welcome-block) .paragraph-section {
     text-decoration: none;
     border-radius: 0.5rem;
     font-size: var(--font-size);
-    margin: 0 0 0 0.5rem;
+    margin: 0;
     padding: 0 0.5rem;
     color: var(--text-color-secondary);
     background-color: var(--text-color-primary); 
@@ -158,6 +158,25 @@ div:not(.welcome-block) .paragraph-section {
     inset: 0;
     transform: skewY(-5deg);
     z-index: -1;
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+
+.first-block::before {
+    content: '';
+    background-image: linear-gradient(
+        45deg,
+        #c471ed,
+        #f64f59,
+        #12c2e9
+    );
+    position: absolute;
+    inset: 0;
+    transform: skewY(-5deg);
+    z-index: 0;
+    opacity: var(--opacity);
+    transition-duration: 0.5s;
+    display: var(--display);
 }
 
 .second-block {
@@ -182,6 +201,22 @@ div:not(.welcome-block) .paragraph-section {
     z-index: -1;
 }
 
+.second-block::before {
+    content: '';
+    background-image: linear-gradient(
+        45deg,
+        #f37335,
+        #fdc830
+    );
+    position: absolute;
+    inset: 0;
+    transform: skewY(-5deg);
+    z-index: 0;
+    opacity: var(--opacity);
+    transition-duration: 0.5s;
+    display: var(--display);
+}
+
 .third-block {
     position: relative;
     isolation: isolate;
@@ -198,4 +233,21 @@ div:not(.welcome-block) .paragraph-section {
     inset: 0;
     transform: skewY(-5deg);
     z-index: -1;
+}
+
+.third-block::before {
+    content: '';
+    background-image: linear-gradient(
+        45deg,
+        hsl(61, 98%, 41%),
+        #00ffc8
+        
+    );
+    position: absolute;
+    inset: 0;
+    transform: skewY(-5deg);
+    z-index: 0;
+    opacity: var(--opacity);
+    transition-duration: 0.5s;
+    display: var(--display);
 }
