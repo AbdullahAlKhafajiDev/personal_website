@@ -31,7 +31,7 @@ nav {
 }
 
 nav span {
-    padding: 0.3rem 2rem;
+    padding: 0.7rem 2rem;
     color: var(--color3);
     font-size: 1.5rem;
     transition-duration: 0.2s;
@@ -68,6 +68,21 @@ nav span:hover{
     top: 40%;
     left: 0.5rem;
     background-color: var(--color4);
+}
+
+.welcome-block .paragraph-section {
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.welcome-block .paragraph-section:hover {
+    background-image: linear-gradient(
+        to bottom,
+        #1b1b1b,
+        #1b1b1b
+    );
+    color: #f57f7f;
+    border: 2px solid #f57f7f;
 }
 
 
