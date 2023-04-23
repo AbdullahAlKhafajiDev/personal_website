@@ -101,3 +101,11 @@ function gradientBackgroundChanger(object){
             }, 500);
         }
 }
+
+function introduction(){
+    var currentPositionOfPage = window.scrollY;
+    window.scrollTo(0, currentPositionOfPage + 20);
+    setTimeout(() => {
+        document.querySelector('.first-block').scrollIntoView();
+    }, 1200);
+}
