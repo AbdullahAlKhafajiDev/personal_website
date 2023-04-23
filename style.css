@@ -33,7 +33,7 @@ nav {
 nav span {
     padding: 0.3rem 2rem;
     color: var(--color3);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     transition-duration: 0.2s;
 }
 
@@ -102,7 +102,7 @@ div:not(.welcome-block) .paragraph-section {
 
 .paragraph-section p {
     color: inherit;
-    ---font-size: 1.5rem;
+    ---font-size: 1.8rem;
     font-size: var(---font-size);
     text-align: left
 }
@@ -127,7 +127,7 @@ div:not(.welcome-block) .paragraph-section {
 
 
 .paragraph-section > h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: inherit;
     margin: 0 0 3rem 0;
 }
