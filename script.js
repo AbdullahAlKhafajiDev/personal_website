@@ -103,8 +103,9 @@ function gradientBackgroundChanger(object){
 }
 
 function introduction(){
+    const button = document.querySelector('.welcome-block .paragraph-section')
     var currentPositionOfPage = window.scrollY;
-    window.scrollTo(0, currentPositionOfPage + 20);
+    window.scrollTo(0, currentPositionOfPage + 40);
     setTimeout(() => {
         document.querySelector('.first-block').scrollIntoView();
     }, 1500);
