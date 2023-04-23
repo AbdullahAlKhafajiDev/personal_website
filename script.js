@@ -107,5 +107,5 @@ function introduction(){
     window.scrollTo(0, currentPositionOfPage + 20);
     setTimeout(() => {
         document.querySelector('.first-block').scrollIntoView();
-    }, 2000);
+    }, 1500);
 }
