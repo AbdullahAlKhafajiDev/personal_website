@@ -1,7 +1,8 @@
 const me_to_name = document.querySelector(".welcome-block span")
 
 var asyncFuncWorking = false; //global variable to prevent repeated function calls.
-var inFirstSection = true;
+var inFirstSection = true; //is used to determine if the use was in the beginning section or not.
+var introButtonClick = false //used to prevent mutliple firing of the intro button.
 
 document.querySelector('.first-block').style.setProperty('--opacity', 1)
 document.querySelector('.second-block').style.setProperty('--opacity', 1)
@@ -98,10 +99,14 @@ function gradientBackgroundChanger(object){
 }
 
 function introduction(){
-    const button = document.querySelector('.welcome-block .paragraph-section')
-    var currentPositionOfPage = window.scrollY;
-    window.scrollTo(0, currentPositionOfPage + 40);
-    setTimeout(() => {
-        document.querySelector('.first-block').scrollIntoView();
-    }, 1500);
+    if (introButtonClick == false){
+        introButtonClick = true;
+        const button = document.querySelector('.welcome-block .paragraph-section')
+        var currentPositionOfPage = window.scrollY;
+        window.scrollTo(0, currentPositionOfPage + 40);
+        setTimeout(() => {
+            document.querySelector('.first-block').scrollIntoView();
+            introButtonClick = false
+        }, 1500);
+    }
 }

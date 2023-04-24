@@ -66,6 +66,9 @@ nav span:hover{
     color: var(--color3);
 }
 
+div:not(.welcome-block) .paragraph-section {
+    margin: 0 0 0 26%;
+}
 
 .welcome-block .paragraph-section {
     cursor: pointer;
@@ -80,11 +83,6 @@ nav span:hover{
     );
     color: #f57f7f;
     border: 2px solid #f57f7f;
-}
-
-
-div:not(.welcome-block) .paragraph-section {
-    margin: 0 0 0 26%;
 }
 
 .welcome-block .paragraph-section {
