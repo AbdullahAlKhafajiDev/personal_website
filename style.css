@@ -19,7 +19,7 @@ body {
 }
 
 ::-webkit-scrollbar{
-    width: 0.7vw;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -52,14 +52,6 @@ nav span {
     transition-duration: 0.2s;
 }
 
-nav > span:first-of-type {
-    border-radius: 0 0 0 3rem;
-}
-
-/* nav > span:last-of-type {
-    border-radius: 0 0 3rem 0;
-} */
-
 nav span:hover{
     cursor: pointer;
     background-color: var(--color4);
@@ -67,7 +59,7 @@ nav span:hover{
 }
 
 div:not(.welcome-block) .paragraph-section {
-    margin: 0 0 0 26%;
+    /* margin: 0 0 0 26%; */
 }
 
 .welcome-block .paragraph-section {
@@ -151,7 +143,6 @@ div:not(.welcome-block) .paragraph-section {
 }
 
 .first-block {
-    color: white;
     position: relative;
     isolation: isolate;
 }
@@ -191,7 +182,9 @@ div:not(.welcome-block) .paragraph-section {
 
 .second-block {
     position: relative;
-    isolation: isolate
+    isolation: isolate;
+    justify-self: left;
+    ;
 }
 
 .second-block p {

@@ -8,11 +8,14 @@ document.querySelector('.first-block').style.setProperty('--opacity', 1)
 document.querySelector('.second-block').style.setProperty('--opacity', 1)
 document.querySelector('.third-block').style.setProperty('--opacity', 1)
 
+window.addEventListener('load', centeringParagraphs)
+window.addEventListener('resize', centeringParagraphs)
+
 //for changing the ME to ABDULLAH AL KHAFAJI.
 window.addEventListener('scroll', (e)=>{
     const personalImgae = document.getElementById('personal_image')
     percentageScrolled = getScrollPercent() * 0.01
-    console.log(percentageScrolled)
+    // console.log(percentageScrolled)
 
     //changes name on scroll.
     if (percentageScrolled == 0){
@@ -109,4 +112,17 @@ function introduction(){
             introButtonClick = false
         }, 1500);
     }
+}
+
+function centeringParagraphs() {
+    let pageWidth = window.innerWidth;
+    let firstParagLeftMargin = document.querySelector('.first-block .paragraph-section').getBoundingClientRect().left
+    let paragraphSection = document.querySelectorAll('div:not(.welcome-block):not(.first-block) .paragraph-section')
+    let centerMargin = pageWidth/2 - document.querySelector('.first-block .paragraph-section').getBoundingClientRect().width/2
+    
+    document.querySelector('.first-block .paragraph-section').style.margin = `0 0 0 ${centerMargin}px`
+
+    paragraphSection.forEach((paragraph)=>{
+        paragraph.style.margin = `0 0 0 ${centerMargin}px`
+    })    
 }
