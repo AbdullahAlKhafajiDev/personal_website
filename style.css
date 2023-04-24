@@ -19,15 +19,30 @@ body {
 }
 
 ::-webkit-scrollbar{
-    display: none;
+    width: 0.7vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color5);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color1);
 }
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 1rem;
     background-color: var(--color1);
+}
+
+nav img {
+    margin-left: 1rem;
+    object-fit: cover;
+    height: 2.4rem;
+    margin-right: auto;
 }
 
 nav span {
@@ -37,13 +52,13 @@ nav span {
     transition-duration: 0.2s;
 }
 
-nav span:first-child {
+nav > span:first-of-type {
     border-radius: 0 0 0 3rem;
 }
 
-nav span:last-child {
+/* nav > span:last-of-type {
     border-radius: 0 0 3rem 0;
-}
+} */
 
 nav span:hover{
     cursor: pointer;
@@ -51,24 +66,6 @@ nav span:hover{
     color: var(--color3);
 }
 
-.side-line {
-    border-radius: 2rem;
-    width: 0.5rem;
-    position: absolute;
-    top: 40%;
-    left: 0.5rem;
-    background-color: var(--color1);
-}
-
-.fill-side-line {
-    border-radius: 2rem;
-    height: calc(var(--body-height) - 2500px);
-    width: 0.5rem;
-    position: absolute;
-    top: 40%;
-    left: 0.5rem;
-    background-color: var(--color4);
-}
 
 .welcome-block .paragraph-section {
     cursor: pointer;

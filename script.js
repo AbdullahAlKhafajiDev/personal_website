@@ -1,6 +1,4 @@
 const me_to_name = document.querySelector(".welcome-block span")
-const leftScrollBackground = document.querySelector('.side-line')
-leftScrollBackground.style.height = `${bodyHeightFinder() * 0.7}px`
 
 var asyncFuncWorking = false; //global variable to prevent repeated function calls.
 var inFirstSection = true;
@@ -12,14 +10,12 @@ document.querySelector('.third-block').style.setProperty('--opacity', 1)
 //for changing the ME to ABDULLAH AL KHAFAJI.
 window.addEventListener('scroll', (e)=>{
     const personalImgae = document.getElementById('personal_image')
-    fillScrollBar = document.querySelector('.fill-side-line')
     percentageScrolled = getScrollPercent() * 0.01
     console.log(percentageScrolled)
 
     //changes name on scroll.
     if (percentageScrolled == 0){
         me_to_name.innerHTML = "me"
-        fillScrollBar.style.height = `0px`
         inFirstSection = true;
 
         //image transformation
@@ -37,7 +33,6 @@ window.addEventListener('scroll', (e)=>{
         }
 
         inFirstSection = false;
-        fillScrollBar.style.height = `${percentageScrolled * (bodyHeightFinder() * 0.7)}px`;
 
         //will return true if object in view.
         gradientBackgroundChanger(document.querySelector('.first-block'))
