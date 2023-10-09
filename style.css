@@ -58,6 +58,10 @@ nav span:hover{
     color: var(--color3);
 }
 
+.hamburger-menu-button {
+    display: none;
+}
+
 div:not(.welcome-block) .paragraph-section {
     /* margin: 0 0 0 26%; */
 }
@@ -271,6 +275,30 @@ div:not(.welcome-block) .paragraph-section {
 }
 
 @media (max-width: 479px){
+    .hamburger-menu-button {
+        display: block;
+
+        background-color: #d90429;
+        color: white;
+
+        margin: 0 1rem;
+        padding: 0.5rem 0.7rem;
+
+        border: none;
+        border-radius: 0.5rem;
+    }
+
+    nav img {
+        margin-left: 1.2rem;
+        object-fit: cover;
+        height: 2.4rem;
+        margin-right: auto;
+    }
+
+    .welcome-block > .paragraph-section > p {
+        font-size: 1.2rem;
+    }
+
     .first-block::before, .first-block::after, .second-block::before, .second-block::after, .third-block::after, .third-block::before {
         transform: skewY(-10deg);
     }
