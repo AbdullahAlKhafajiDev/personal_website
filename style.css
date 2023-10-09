@@ -275,11 +275,38 @@ div:not(.welcome-block) .paragraph-section {
 }
 
 @media (max-width: 479px){
+    .links {
+        background-color: rgba(71, 71, 71, 0.355);
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 20%;
+        transition-duration: 0.2s;
+        backdrop-filter: blur(1rem);
+        transform: translateX(100%);
+    }
+
+    .links[data-visible='true'] {
+        transform: translateX(0%);
+    }
+    
+    .links span:nth-child(1){
+        padding-top: 4rem;
+    }
+
+    .links span {
+        display: block;
+        padding: 2rem 27%;
+        margin: 0 auto;
+    }
+
     .hamburger-menu-button {
         display: block;
 
         background-color: #d90429;
         color: white;
+        z-index: 999;
 
         margin: 0 1rem;
         padding: 0.5rem 0.7rem;

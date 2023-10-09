@@ -10,15 +10,13 @@
 </head>
 <body>
     <nav>
-        <!-- links automatically scrolls to a specific section -->
         <img src="logo.jpeg" alt="Abdullah Al Khafaji Logo">
-        <span onClick = "document.querySelector('.first-block').scrollIntoView();">About me</span>
-        <span onClick = "document.querySelector('.second-block').scrollIntoView();">Resume</span>
-        <span onClick = "document.querySelector('.third-block').scrollIntoView();">Contact me</span>
-        <!-- 
-             features to add:
-             - add screenshots of projects
-        -->
+        <div class="links" data-visible="false">
+            <span onClick = "document.querySelector('.first-block').scrollIntoView();">About me</span>
+            <span onClick = "document.querySelector('.second-block').scrollIntoView();">Resume</span>
+            <span onClick = "document.querySelector('.third-block').scrollIntoView();">Contact me</span>
+        </div>
+        <button class="hamburger-menu-button" onclick="openMenu()">X</button>
     </nav>
 
     <div class="block welcome-block">

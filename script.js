@@ -126,3 +126,16 @@ function centeringParagraphs() {
         paragraph.style.margin = `0 0 0 ${centerMargin}px`
     })    
 }
+
+function openMenu(){
+    console.log('called menu')
+    const menu = document.querySelector('.links');
+    let visible = menu.getAttribute('data-visible');
+    console.log(visible)
+    if (visible == 'false'){
+        menu.setAttribute("data-visible", "true");
+    }
+    else {
+        menu.setAttribute("data-visible", "false");
+    }
+}
