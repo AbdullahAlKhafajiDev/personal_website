@@ -77,7 +77,7 @@ div:not(.welcome-block) .paragraph-section {
     border: 2px solid #f57f7f;
 }
 
-.welcome-block .paragraph-section {
+.welcome-block > .paragraph-section {
     margin: 0 auto;
 }
 
@@ -253,4 +253,19 @@ div:not(.welcome-block) .paragraph-section {
     opacity: var(--opacity);
     transition-duration: 0.5s;
     display: var(--display);
+}
+
+@media (min-width: 400px) and (max-width:1024px) {
+    .paragraph-section {
+        margin: 0 2rem; 
+    }
+
+    .paragraph-section p {
+        ---font-size: 1rem;
+        font-size: var(---font-size);
+    }
+    
+    .paragraph-section > h1 {
+        font-size: 2rem;
+    }
 }
