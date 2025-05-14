@@ -187,8 +187,6 @@ div:not(.welcome-block) .paragraph-section {
 .second-block {
     position: relative;
     isolation: isolate;
-    justify-self: left;
-    ;
 }
 
 .second-block p {
